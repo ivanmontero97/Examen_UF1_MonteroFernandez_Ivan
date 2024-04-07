@@ -1,0 +1,160 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+}
+/* ----------------- Header y Nav ------------------ */
+
+header{
+    width:100%;
+    background-color: #052962;
+    position: fixed;
+}
+#guardian{
+    display: flex;
+    justify-content: right;
+}
+
+.nav{
+    display:flex;
+    list-style-type: none;
+    margin-left:3%;
+}
+
+li {
+    border-top:red 1.5px solid;
+    border-left:white 1px solid;
+    border-right:white 1px solid;
+    padding:1rem;
+    height: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+ .nav > li:hover{
+    text-decoration: underline;
+    border-top:orange 1.5px solid;
+    cursor:pointer;
+ }
+
+
+
+/* ----------------- Subheader ------------------ */
+.subheader{
+    padding-top:10%;
+}
+h2{
+    border:black 1px solid;
+    margin-left:3%;
+    font-size:1.5rem ;
+}
+/* ----------------- Main and Section ------------------ */
+main{
+    display: flex;
+    width:70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top:5%;
+    margin-bottom: 5%;
+    height: auto;
+}
+section{
+    display: grid;
+    grid-gap:1%;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-rows:auto ;
+    grid-template-areas: 
+   "one one one"
+   "two two five"
+   "three three five"
+   "four four five"
+    ;
+   
+}
+
+
+section .articulo.one{
+    grid-area: one;
+}
+section .articulo.two{
+    grid-area: two;
+}
+section .articulo.three{
+    grid-area: three;
+}
+section .articulo.four{
+    grid-area:four;
+}
+section .articulo.five{
+    grid-area:five;
+}
+ /* Excepciones de anchura y altura para el articulo uno que es diferente al resto */
+.notice.one{
+    min-width: 40%;
+}
+.foto.one{
+    min-width:60%;
+}
+.foto.one > img{
+    min-height: 100%;
+}
+
+.foto img{
+    width: 100%;
+    max-height: 75%;
+}   
+
+.articulo{
+    background-color: #d6c173  ;
+    display: flex;
+    height: auto;
+    border-top:red 3px solid;
+}
+.articulo:hover{
+    border-top:orange 3px solid;
+    cursor:pointer;
+}
+.foto{
+    min-width:40%;
+}
+.notice{
+    min-width: 60%;
+}
+
+
+ h5 {
+    font-size: 2rem;
+}
+p{
+    font-size: 1.5rem;
+}
+
+/* Breakpoints */
+@media (max-width: 800px) {
+    main{
+        margin-top:10%;
+    }
+    .subheader{
+        padding-top:35%;
+    }
+    section {
+        display: block; 
+    }
+    .articulo {
+        width: 100%; 
+        margin-bottom: 2%; 
+        display: block;
+    }
+    .foto{
+        min-width:100%;
+        
+    }
+    .notice{
+        width: 100%;
+    }
+  
+
+}
